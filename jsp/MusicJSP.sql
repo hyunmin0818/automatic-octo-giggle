@@ -88,7 +88,6 @@ CREATE TABLE Ratings (
 ALTER TABLE Songs
 ADD COLUMN average_rating DECIMAL(2,1);
 
-
 -- 앨범 정보 표시 기능
 CREATE TABLE Albums (
     album_id INT PRIMARY KEY,
@@ -108,7 +107,6 @@ CREATE TABLE AlbumSongs (
     FOREIGN KEY (album_id) REFERENCES Albums(album_id),
     FOREIGN KEY (song_id) REFERENCES Songs(song_id)
 );
-
 
 -- 좋아요 표시 기능
 CREATE TABLE Likes (
